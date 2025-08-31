@@ -98,11 +98,12 @@ CMD ["node", "server.js"]
 
 ### Rebuild After Code Changes
  - When you modify code locally:
+ 
  **1.Stop & remove the old container:**
  ```
- docker stop mynodeapp
- docker rm mynodeapp
-```
+    docker stop mynodeapp
+    docker rm mynodeapp
+ ```
 
  **2. Build a new image (with updated tag):**
  ```
@@ -112,7 +113,7 @@ CMD ["node", "server.js"]
  ```
  docker run -d -p 3001:3001 --name mynodeapp reapedjuggler/nodeexamplewithdocker:firstimage1.0.2
  ```
-[!terminal-commands](images/rebuild.png)
+![terminal-commands](images/rebuild.png)
 ---
  ### Clean Up Unused Resources
   - Remove unused containers, images, networks:
