@@ -4,11 +4,22 @@
 **1.Here is the way through which we can create the docker image:**
 - Create the Dockerfile and inside that we can write this code:
 ```
+    # Use an official Node.js runtime as a parent image
     FROM node:latest
+
+    # Set the working directory in the container
     WORKDIR /usr/app
+
+    # Copy your application code into the container
     COPY . .
+
+    # Install application dependencies
     RUN npm i
+
+    # Expose a port your application will listen on
     EXPOSE 3001
+
+    # Define the command to run your application
     CMD node server.js
 ```
 ---
